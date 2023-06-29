@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 // import {
 //   MovieCard,
 //   ImageWrapper,
@@ -37,11 +37,11 @@ export const Movie = ({ movie }) => {
           <h2>
             {title} ({new Date(release_date).getFullYear()})
           </h2>
-          <Text>User score: {Math.round(vote_average * 10)} %</Text>
+          <p>User score: {Math.round(vote_average * 10)} %</p>
           <h3>Genres</h3>
           <p>{genres.map(({ name }) => name).join(', ')}</p>
           <h3>Overview</h3>
-          <Text>{overview}</Text>
+          <p>{overview}</p>
         </div>
       </div>
       <h3>Additional information</h3>
@@ -61,13 +61,13 @@ export const Movie = ({ movie }) => {
   );
 };
 
-Movie.propTypes = {
-  movie: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    release_date: PropTypes.string.isRequired,
-    overview: PropTypes.string.isRequired,
-    poster_path: PropTypes.string,
-    vote_average: PropTypes.number.isRequired,
-    genres: PropTypes.array.isRequired,
-  }).isRequired,
-};
+// Movie.propTypes = {
+//   movie: PropTypes.shape({
+//     title: PropTypes.string.isRequired,
+//     release_date: PropTypes.string.isRequired,
+//     overview: PropTypes.string.isRequired,
+//     poster_path: PropTypes.string,
+//     vote_average: PropTypes.number.isRequired,
+//     genres: PropTypes.array.isRequired,
+//   }).isRequired,
+// };

@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 // import { MainContainer } from 'utils/GlobalStyle';
 // import { ActorList, CastItem, Wrapper, Avatar } from './CastList.styled';
 
@@ -35,15 +35,15 @@ export const CastList = ({ info }) => {
   );
 };
 
-CastList.propTypes = {
-  info: PropTypes.shape({
-    cast: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired,
-        profile_path: PropTypes.string,
-        character: PropTypes.string.isRequired,
-      })
-    ).isRequired,
-  }).isRequired,
-};
+// CastList.propTypes = {
+//   info: PropTypes.shape({
+//     cast: PropTypes.arrayOf(
+//       PropTypes.shape({
+//         id: PropTypes.number.isRequired,
+//         name: PropTypes.string.isRequired,
+//         profile_path: PropTypes.string,
+//         character: PropTypes.string.isRequired,
+//       })
+//     ).isRequired,
+//   }).isRequired,
+// };

@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 export const MoviesList = ({ movies }) => {
@@ -26,12 +26,12 @@ export const MoviesList = ({ movies }) => {
   );
 };
 
-MoviesList.propTypes = {
-  movies: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      url: PropTypes.string,
-    })
-  ).isRequired,
-};
+// MoviesList.propTypes = {
+//   movies: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.number.isRequired,
+//       title: PropTypes.string.isRequired,
+//       url: PropTypes.string,
+//     })
+//   ).isRequired,
+// };

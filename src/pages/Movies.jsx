@@ -6,7 +6,7 @@ import { fetchMoviesByQuery } from 'fetchAPI/fetchAPI';
 // import { MainContainer } from 'utils/GlobalStyle';
 // import { Form, Button, Input } from './MoviesPage.styled';
 
-const MoviesPage = () => {
+const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -69,4 +69,4 @@ const MoviesPage = () => {
   );
 };
 
-export default MoviesPage;
+export default Movies;

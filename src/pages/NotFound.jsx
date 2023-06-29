@@ -2,7 +2,7 @@ import React from 'react';
 // import { GoBack } from './Page.styled';
 import { Link } from 'react-router-dom';
 
-export const NotFound = () => {
+const NotFound = () => {
   return (
     <>
       <Link to="/">Go Back!</Link>
@@ -10,3 +10,5 @@ export const NotFound = () => {
     </>
   );
 };
+
+export default NotFound;
