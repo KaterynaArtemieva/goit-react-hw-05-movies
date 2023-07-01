@@ -2,11 +2,11 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { fetchMovieById } from 'fetchAPI/fetchAPI';
 
-export const useFetchMovieInfo = (endpoint = '') => {
+export default function useFetchMovieInfo (endpoint = '') {
   const [movieInfo, setMovieInfo] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const { id } = useParams();
+  const { movieId } = useParams();
 
   useEffect(() => {
     const getMovie = async movieId => {
@@ -21,8 +21,8 @@ export const useFetchMovieInfo = (endpoint = '') => {
       }
     };
 
-    getMovie(id);
-  }, [id, endpoint]);
+    getMovie(movieId);
+  }, [movieId, endpoint]);
 
   return { movieInfo, isLoading, error };
 };

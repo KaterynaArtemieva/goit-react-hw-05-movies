@@ -1,5 +1,5 @@
 import { Loader } from 'components/Loader/Loader';
-import { useFetchMovieInfo } from 'hooks/useFetchMovieInfo';
+import useFetchMovieInfo from 'hooks/useFetchMovieInfo';
 import { CastList } from 'components/CastList/CastList';
 
 const Cast = () => {

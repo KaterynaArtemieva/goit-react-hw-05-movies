@@ -1,6 +1,6 @@
 import { Loader } from 'components/Loader/Loader';
 import { ReviewList } from 'components/ReviewList/ReviewList';
-import { useFetchMovieInfo } from 'hooks/useFetchMovieInfo';
+import useFetchMovieInfo from 'hooks/useFetchMovieInfo';
 
 const Reviews = () => {
   const { movieInfo, isLoading, error } = useFetchMovieInfo('/reviews');
