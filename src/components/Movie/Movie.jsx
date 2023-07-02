@@ -1,16 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-// import PropTypes from 'prop-types';
-// import {
-//   MovieCard,
-//   ImageWrapper,
-//   Text,
-//   Btn,
-//   StyledLink,
-//   LinkList,
-//   LinkItem,
-// } from './Movie.styled';
-// import { MainContainer } from 'utils/GlobalStyle';
-import { Link } from 'react-router-dom';
+import { Box } from '../Box/Box.styled';
+import { Button, Wrap, Img, LinkBtn, List } from './Movie.styled';
+import PropTypes from 'prop-types';
 
 export const Movie = ({ movie }) => {
   const { title, release_date, overview, poster_path, vote_average, genres } =
@@ -22,17 +13,15 @@ export const Movie = ({ movie }) => {
   };
 
   return (
-    <div>
-      <button type="button" onClick={onBtnClick}>
+    <Box>
+      <Button type="button" onClick={onBtnClick}>
         Go back
-      </button>
-      <div>
-        <div>
-          <img
-            src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-            alt={title}
-          />
-        </div>
+      </Button>
+      <Wrap>
+        <Img
+          src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
+          alt={title}
+        />
         <div>
           <h2>
             {title} ({new Date(release_date).getFullYear()})
@@ -43,31 +32,31 @@ export const Movie = ({ movie }) => {
           <h3>Overview</h3>
           <p>{overview}</p>
         </div>
-      </div>
-      <h3>Additional information</h3>
-      <ul>
+      </Wrap>
+      <h2>Additional information</h2>
+      <List>
         <li>
-          <Link to="cast" state={location.state}>
+          <LinkBtn to="cast" state={location.state}>
             Cast
-          </Link>
+          </LinkBtn>
         </li>
         <li>
-          <Link to="reviews" state={location.state}>
+          <LinkBtn to="reviews" state={location.state}>
             Reviews
-          </Link>
+          </LinkBtn>
         </li>
-      </ul>
-    </div>
+      </List>
+    </Box>
   );
 };
 
-// Movie.propTypes = {
-//   movie: PropTypes.shape({
-//     title: PropTypes.string.isRequired,
-//     release_date: PropTypes.string.isRequired,
-//     overview: PropTypes.string.isRequired,
-//     poster_path: PropTypes.string,
-//     vote_average: PropTypes.number.isRequired,
-//     genres: PropTypes.array.isRequired,
-//   }).isRequired,
-// };
+Movie.propTypes = {
+  movie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    release_date: PropTypes.string.isRequired,
+    overview: PropTypes.string.isRequired,
+    poster_path: PropTypes.string,
+    vote_average: PropTypes.number.isRequired,
+    genres: PropTypes.array.isRequired,
+  }).isRequired,
+};

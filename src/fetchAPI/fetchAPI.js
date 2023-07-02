@@ -7,14 +7,22 @@ export const fetchTrendingMovies = async () => {
   const { data } = await axios('trending/movie/week', {
     params: { api_key: KEY },
   });
-  return data.results.map(({ id, title, poster_path }) => ({ id, title, url: poster_path }));
+  return data.results.map(({ id, title, poster_path }) => ({
+    id,
+    title,
+    url: poster_path,
+  }));
 };
 
 export const fetchMoviesByQuery = async query => {
   const { data } = await axios('search/movie', {
     params: { api_key: KEY, query },
   });
-  return data.results.map(({ id, title, poster_path }) => ({ id, title, url: poster_path }));
+  return data.results.map(({ id, title, poster_path }) => ({
+    id,
+    title,
+    url: poster_path,
+  }));
 };
 
 export const fetchMovieById = async (movieId, endpoint) => {

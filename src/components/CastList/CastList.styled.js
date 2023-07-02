@@ -10,7 +10,6 @@ export const Item = styled.li`
   width: calc((100% - 30px) / 4);
   display: flex;
   align-items: center;
-
   gap: 5px;
   font-size: 12px;
 `;

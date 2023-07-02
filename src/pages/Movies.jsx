@@ -3,8 +3,8 @@ import { useSearchParams } from 'react-router-dom';
 import { Loader } from 'components/Loader/Loader';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { fetchMoviesByQuery } from 'fetchAPI/fetchAPI';
-// import { MainContainer } from 'utils/GlobalStyle';
-// import { Form, Button, Input } from './MoviesPage.styled';
+import { Box } from 'components/Box/Box.styled';
+import { Form, Input, Button } from './Styled/Movies.styled';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -47,16 +47,16 @@ const Movies = () => {
   }, [query]);
 
   return (
-    <div>
-      <form onSubmit={onFormSubmit}>
-        <input
+    <Box>
+      <Form onSubmit={onFormSubmit}>
+        <Input
           type="text"
           name="search"
           value={searchQuery}
           onChange={onInput}
         />
-        <button>Search</button>
-      </form>
+        <Button>Search</Button>
+      </Form>
       {isLoading && <Loader />}
       {error && (
         <p>
@@ -65,7 +65,7 @@ const Movies = () => {
         </p>
       )}
       {movies.length > 0 && <MoviesList movies={movies} />}
-    </div>
+    </Box>
   );
 };
 

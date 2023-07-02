@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import useFetchMovieInfo from 'hooks/useFetchMovieInfo';
-
 import { Movie } from 'components/Movie/Movie';
 import { Loader } from 'components/Loader/Loader';
 

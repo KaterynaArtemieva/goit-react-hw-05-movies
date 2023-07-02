@@ -1,5 +1,4 @@
-// import PropTypes from 'prop-types';
-// import { MainContainer } from 'utils/GlobalStyle';
+import PropTypes from 'prop-types';
 
 export const ReviewList = ({ info }) => {
   return (
@@ -20,14 +19,14 @@ export const ReviewList = ({ info }) => {
   );
 };
 
-// ReviewList.propTypes = {
-//   info: PropTypes.shape({
-//     results: PropTypes.arrayOf(
-//       PropTypes.shape({
-//         id: PropTypes.string.isRequired,
-//         author: PropTypes.string.isRequired,
-//         content: PropTypes.string.isRequired,
-//       })
-//     ).isRequired,
-//   }).isRequired,
-// };
+ReviewList.propTypes = {
+  info: PropTypes.shape({
+    results: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        author: PropTypes.string.isRequired,
+        content: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  }).isRequired,
+};

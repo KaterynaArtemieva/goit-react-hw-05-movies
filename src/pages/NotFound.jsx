@@ -1,5 +1,4 @@
 import React from 'react';
-// import { GoBack } from './Page.styled';
 import { Link } from 'react-router-dom';
 
 const NotFound = () => {
